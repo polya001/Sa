@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Джек Воробей</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      background-size: cover;  
+      background-position: center;  
+      background-repeat: no-repeat;  
+      padding-bottom: 60px;
+    }
+
+    header {
+      background-color: #492f1d;  
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #8B4513;  /* Коричневый */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+
+    .btn {
+      background-color: #8B4513;  /* Коричневый */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: rgb(90, 49, 3);  
+    }
+
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+      footer {
+        font-size: 14px;
+      }
+
+    }
+
+    @media screen and (min-width: 1024px) {
+
+      section {
+        padding: 30px;
+        margin: 30px auto;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Джек Воробей — Капитан «Чёрной Жемчужины»</h1>
+  </header>
+
+  <section>
+    <article>
+      <h2>Кто такой Джек Воробей?</h2>
+      <img src="https://cdn.shazoo.ru/302256_aZ3O8ipE3l_296272_shupum3buk_piraty_karibsk.jpg" alt="Джек Воробей">
+      <p>Джек Воробей — легендарный пират, капитан «Чёрной Жемчужины». Он известен своей хитростью, обаянием и умением выходить из самых сложных ситуаций. Джек — герой фильмов «Пираты Карибского моря».</p>
+      <p>В контексте фильмов Джек — член «Братства пиратских баронов семи морей». Не чужд вероломству, выживает больше благодаря остроумию и умению вести переговоры, чем благодаря оружию и силе. Предпочитает избегать чересчур опасных ситуаций и дерётся лишь в случае необходимости</p>
+    </article>
+
+    <article>
+
+      <h3>Основные достижения</h3>
+
+      <ul>
+        <li>Похищение «Чёрной Жемчужины» у Барбоссы.</li>
+        <li>Нахождение Сундука Дэйви Джонса.</li>
+        <li>Участие в битве за Край Света.</li>
+      </ul>
+
+    </article>
+
+    <article>
+      <h3>Интересные факты</h3>
+      <p>Джек Воробей — один из самых харизматичных персонажей современного кино. Узнайте больше о нем, посмотрев фильмы на <a href="https://rutube.ru/video/da1fd7d821dd1f962e261e5dc528f538/?r=plwd" target="_blank">Rutube</a>.</p>
+    </article>
+
+  </section>
+
+  <section>
+    <h3>Скучный фон? Измени!</h3>
+    <button class="btn" id="colorButton">Сменить цвет фона</button>
+
+  </section>
+
+  <footer>
+
+    <p>&copy; 2025. Всё о Джеке Воробье.</p>
+
+  </footer>
+
+  <script>
+
+    const button = document.getElementById('colorButton');
+
+    const body = document.body;
+
+    button.addEventListener('click', () => {
+      const backgrounds = [ 'url("https://i.ytimg.com/vi/6LTe9iUJKec/maxresdefault.jpg")', 'url("https://i.pinimg.com/originals/ea/4a/a8/ea4aa8f5132de06aac97c79cf82ff735.jpg")'];
+      const randomBackground = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+      body.style.backgroundImage = randomBackground.includes('url') ? randomBackground : 'none'; 
+      body.style.backgroundColor = randomBackground.includes('url') ? '#f4f4f4' : randomBackground;
+    });
+
+  </script>
+
+</body>
+
+</html>
